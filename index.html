@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Background</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a class="logo"> logo </a>
+        <div class="header__right">
+          <div class="btns day-night">
+            <ion-icon name="moon-outline" class="icon"></ion-icon>
+            <ion-icon name="sunny-outline" class="icon"></ion-icon>
+          </div>
+          <div class="btns toggle">
+            <ion-icon name="menu-outline" class="icon"></ion-icon>
+            <ion-icon name="close-outline" class="icon"></ion-icon>
+          </div>
+        </div>
+      </header>
+    </div>
+    <section id="main">
+      <video
+        class="video"
+        src="./image/video.mp4"
+        autoplay
+        loop
+        muted
+        type="mp4"
+      ></video>
+      <img class="mask" src="./image/mask.jpg" alt="" />
+      <h2>Ocean</h2>
+      <ul class="socials">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+    </section>
+    <!-- sidebar navigation -->
+    <nav class="navbar">
+      <ul class="navbar__nav">
+        <li class="navbar__item">
+          <a href="">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="">About</a>
+        </li>
+        <li class="navbar__item">
+          <a href="">Product</a>
+        </li>
+        <li class="navbar__item">
+          <a href="">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      let dayNight = document.querySelector(".day-night");
+      let toggle = document.querySelector(".toggle");
+      let body = document.querySelector("body");
+      let navigation = document.querySelector(".navbar");
+
+      dayNight.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        dayNight.classList.toggle("active");
+      });
+
+      toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
